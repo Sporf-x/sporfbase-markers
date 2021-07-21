@@ -75,87 +75,88 @@ var MAPCRAFTER_MARKERS = [
 		},
 	},
 	*/
-  {
-    // id of the marker group, without spaces/other special chars
-    "id" : "signs",
-    // name of the marker group, displayed in the webinterface
-    "name" : "Signs",
-    // icon of the markers belonging to that group (optional)
-    //"icon" : "sign.png",
-    "icon" : "emblem-photos.svg",
-    // size of that icon
-    "iconSize" : [32, 32],
-    // whether this marker group is shown by default (optional)
-    "showDefault" : true,
-    // markers of this marker group...
-    "markers" : {
-      // ...in the world "world"
-      "fantasia" : [
-		// Points of Interest:
-		{"pos" : [-650, 1000, 64], "title" : "MINE"},
-		{"pos" : [-2200, 225, 64], "title" : "Lake Grandjardin"},
-		{"pos" : [-2210, 319, 64], "title" : "Sporf Sanssouci"},
-		{"pos" : [-200, 0, 64], "title" : "Granjero"},
-		{"pos" : [0, -300, 64], "title" : "Arcadia"},
-		{"pos" : [-3013, -1871, 64], "title" : "Sapia, Capital of Atlantica"},
-    ],
-    },
-  },
-  {
-    "id" : "claims",
-    "name" : "Claims",
-    "createMarker" : function(ui, groupInfo, markerInfo) {
-      // use the ui.mcToLatLng-function to convert Minecraft coords to LatLngs
-      var latlngs = markerInfo.points.map(([x,y]) => ui.mcToLatLng(x, y, 64));
-      // Add starting point to complete line loop
-      const [x0,y0] = markerInfo.points[0];
-      latlngs.push(ui.mcToLatLng(x0, y0, 64));
-      return L.polygon(
-	latlngs,
 	{
-	  "color": markerInfo.color,
-	  "fillColor": markerInfo.fillColor,
-	  "fillOpacity": markerInfo.fillOpacity,
-	}).bindPopup(markerInfo.title);
-    },
-    "markers": {
-      "fantasia": [
-	// Territorial Claims
-	{
-	  "points" : [ [-2400,-2020],
-		       [-2800,-1550],
-		       [-3320,-1700],
-		       [-3500,-3400],
-		       [-2830,-4060],
-		       [-2130,-3280],
-		       [-2520,-2300],
-			   [-3800, -2880],
-			   [-3400, -2500] ],
-	  // Serves as an outline
-	  "color" : "navy",
-	  "fillColor" : "#4169e1",
-	  "fillOpacity" : "0.3",
-	  "title" : "<a href='http://sporfbase.com/mediawiki/index.php/Atlantica'> Atlantica </a>"
+		// id of the marker group, without spaces/other special chars
+		"id": "signs",
+		// name of the marker group, displayed in the webinterface
+		"name": "Signs",
+		// icon of the markers belonging to that group (optional)
+		//"icon" : "sign.png",
+		"icon": "emblem-photos.svg",
+		// size of that icon
+		"iconSize": [32, 32],
+		// whether this marker group is shown by default (optional)
+		"showDefault": true,
+		// markers of this marker group...
+		"markers": {
+			// ...in the world "world"
+			"fantasia": [
+				// Points of Interest:
+				{ "pos": [-650, 1000, 64], "title": "MINE" },
+				{ "pos": [-2200, 225, 64], "title": "Lake Grandjardin" },
+				{ "pos": [-2210, 319, 64], "title": "Sporf Sanssouci" },
+				{ "pos": [-200, 0, 64], "title": "Granjero" },
+				{ "pos": [0, -300, 64], "title": "Arcadia" },
+				{ "pos": [-3013, -1871, 64], "title": "Sapia, Capital of Atlantica" },
+			],
+		},
 	},
 	{
-		"points" : [ 
-			[-2400,-2020],
-            [-2800,-1550],
-            [-3320,-1700],
-            [-3400,-2500]
-            [-3800,-2880]
-            [-3500,-3400],
-            [-2830,-4060],
-            [-2130,-3280],
-            [-2520,-2300]
-		],
-		// Serves as an outline
-		"color" : "#003153",
-		"fillColor" : "#0080ff",
-		"fillOpacity" : "0.3",
-		"title" : "<a href='http://sporfbase.com/mediawiki/index.php/Kingdom_of_Westphalia'> Kingdom of Westphalia </a>"
-	  },
-      ]
-    }
-  }
+		"id": "claims",
+		"name": "Claims",
+		"createMarker": function (ui, groupInfo, markerInfo) {
+			// use the ui.mcToLatLng-function to convert Minecraft coords to LatLngs
+			var latlngs = markerInfo.points.map(([x, y]) => ui.mcToLatLng(x, y, 64));
+			// Add starting point to complete line loop
+			const [x0, y0] = markerInfo.points[0];
+			latlngs.push(ui.mcToLatLng(x0, y0, 64));
+			return L.polygon(
+				latlngs,
+				{
+					"color": markerInfo.color,
+					"fillColor": markerInfo.fillColor,
+					"fillOpacity": markerInfo.fillOpacity,
+				}).bindPopup(markerInfo.title);
+		},
+		"markers": {
+			"fantasia": [
+				// Territorial Claims
+				{
+					"points": [
+						[-2400, -2020],
+						[-2800, -1550],
+						[-3320, -1700],
+						[-3400, -2500]
+						[-3800, -2880]
+						[-3500, -3400],
+						[-2830, -4060],
+						[-2130, -3280],
+						[-2520, -2300]
+					],
+					// Serves as an outline
+					"color": "navy",
+					"fillColor": "#4169e1",
+					"fillOpacity": "0.3",
+					"title": "<a href='http://sporfbase.com/mediawiki/index.php/Atlantica'> Atlantica </a>"
+				},
+				{
+					"points": [
+						[-2403, -1566],
+						[-1994, -1177],
+						[-1651, -1159],
+						[-1651, -1275],
+						[-1504, -1421],
+						[-2006, -2020],
+						[-2400, -2020],
+						[-2580, -1787]
+					],
+					// Serves as an outline
+					"color": "#003153",
+					"fillColor": "#0080ff",
+					"fillOpacity": "0.3",
+					"title": "<a href='http://sporfbase.com/mediawiki/index.php/Kingdom_of_Westphalia'> Kingdom of Westphalia </a>"
+				},
+			]
+		}
+	}
 ];
