@@ -98,22 +98,44 @@ var MAPCRAFTER_MARKERS = [
 		{"pos" : [-200, 0, 64], "title" : "Granjero"},
 		{"pos" : [0, -300, 64], "title" : "Arcadia"},
 		{"pos" : [-3013, -1871, 64], "title" : "Sapia, Capital of Atlantica"},
-		// Territorial Claims
-		{
-			"p1" : [-2400,-2020],
-			"p2" : [-2800, -1550],
-			"p3" : [-3320, -1700],
-			"p4" : [-3500,-3400],
-			"p5" : [-3500,-3400],
-			"p6" : [-3500,-3400],
-			"p7" : [-2520,-2300],
-			// Serves as an outline
-			"color" : "navy",
-			"fillColor" : "#4169e1",
-			"fillOpacity" : "0.3",
-			"title" : "Atlantica"
- 		}
     ],
     },
   },
+  {
+    "id" : "claims",
+    "name" : "Claims",
+    "createMarker" : function(ui, groupInfo, markerInfo) {
+      // use the ui.mcToLatLng-function to convert Minecraft coords to LatLngs
+      var latlngs = markerInfo.points.map(([x,y]) => ui.mcToLatLng(x, y, 64));
+      // Add starting point to complete line loop
+      const [x0,y0] = markerInfo.points[0];
+      latlngs.push(ui.mcToLatLng(x0, y0, 64));
+      return L.polygon(
+	latlngs,
+	{
+	  "color": markerInfo.color,
+	  "fillColor": markerInfo.fillColor,
+	  "fillOpacity": markerInfo.fillOpacity,
+	}).bindPopup(markerInfo.title);
+    },
+    "markers": {
+      "fantasia": [
+	// Territorial Claims
+	{
+	  "points" : [ [-2400,-2020],
+		       [-2800,-1550],
+		       [-3320,-1700],
+		       [-3500,-3400],
+		       [-3500,-3400],
+		       [-3500,-3400],
+		       [-2520,-2300] ],
+	  // Serves as an outline
+	  "color" : "navy",
+	  "fillColor" : "#4169e1",
+	  "fillOpacity" : "0.3",
+	  "title" : "Atlantica"
+	}
+      ]
+    }
+  }
 ];
