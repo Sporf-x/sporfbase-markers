@@ -127,30 +127,51 @@ var MAPCRAFTER_MARKERS = [
       latlngs.push(ui.mcToLatLng(x0, y0, 64));
       return L.polygon(
 	latlngs,
-	{
-	  "color": markerInfo.color,
-	  "fillColor": markerInfo.fillColor,
-	  "fillOpacity": markerInfo.fillOpacity,
-	}).bindPopup(markerInfo.title);
-    },
-    "markers": {
-      "fantasia": [
-	// Territorial Claims
-	{
-	  "points" : [ [-2400,-2020],
-		       [-2800,-1550],
-		       [-3320,-1700],
-		       [-3500,-3400],
-		       [-3500,-3400],
-		       [-3500,-3400],
-		       [-2520,-2300] ],
-	  // Serves as an outline
-	  "color" : "navy",
-	  "fillColor" : "#4169e1",
-	  "fillOpacity" : "0.3",
-	  "title" : "Atlantica"
-	},
-	{
+				{
+					"color": markerInfo.color,
+					"fillColor": markerInfo.fillColor,
+					"fillOpacity": markerInfo.fillOpacity,
+				}).bindPopup(markerInfo.title);
+		},
+		"markers": {
+			"fantasia": [
+				// Territorial Claims
+				{
+					"points": [
+						[-2400, -2020],
+						[-2800, -1550],
+						[-3320, -1700],
+						[-3400, -2500]
+						[-3800, -2880]
+						[-3500, -3400],
+						[-2830, -4060],
+						[-2130, -3280],
+						[-2520, -2300]
+					],
+					// Serves as an outline
+					"color": "navy",
+					"fillColor": "#4169e1",
+					"fillOpacity": "0.3",
+					"title": "<a href='http://sporfbase.com/mediawiki/index.php/Atlantica'> Atlantica </a>"
+				},
+				{
+					"points": [
+						[-2403, -1566],
+						[-1994, -1177],
+						[-1651, -1159],
+						[-1651, -1275],
+						[-1504, -1421],
+						[-2006, -2020],
+						[-2400, -2020],
+						[-2580, -1787]
+					],
+					// Serves as an outline
+					"color": "#003153",
+					"fillColor": "#0080ff",
+					"fillOpacity": "0.3",
+					"title": "<a href='http://sporfbase.com/mediawiki/index.php/Kingdom_of_Westphalia'> Kingdom of Westphalia </a>"
+				},
+          	{
 		"points" : [ [-3497,-1949],
 		       [-3815,-2207],
 		       [-4343,-2085],
@@ -162,8 +183,8 @@ var MAPCRAFTER_MARKERS = [
 	  "fillColor" : "#ff8058",
 	  "fillOpacity" : "0.3",
 	  "title" : "Volnoria"
+				},
+			]
+		}
 	}
-      ]
-    }
-  }
 ];
