@@ -98,6 +98,9 @@ var MAPCRAFTER_MARKERS = [
 		{"pos" : [-200, 0, 64], "title" : "Granjero"},
 		{"pos" : [0, -300, 64], "title" : "Arcadia"},
 		{"pos" : [-3013, -1871, 64], "title" : "Sapia, Capital of Atlantica"},
+		{"pos" : [-3940, -1900, 64], "title" : "Prahrad"},
+		{"pos" : [-3617, -1900, 64], "title" : "New Szczecin"},
+		{"pos" : [-4227, -1849, 64], "title" : "Bernova"},
     ],
     },
   },
@@ -134,6 +137,19 @@ var MAPCRAFTER_MARKERS = [
 	  "fillColor" : "#4169e1",
 	  "fillOpacity" : "0.3",
 	  "title" : "Atlantica"
+	},
+	{
+		"points" : [ [-3497,-1949],
+		       [-3815,-2207],
+		       [-4343,-2085],
+		       [-4338,-1720],
+		       [-3641,-1686],
+			   ],
+	  // Serves as an outline
+	  "color" : "#000000",
+	  "fillColor" : "#ff8058",
+	  "fillOpacity" : "0.3",
+	  "title" : "Volnoria"
 	}
       ]
     }
