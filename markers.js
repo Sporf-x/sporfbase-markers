@@ -133,8 +133,23 @@ var MAPCRAFTER_MARKERS = [
 	  "color" : "navy",
 	  "fillColor" : "#4169e1",
 	  "fillOpacity" : "0.3",
-	  "title" : "Atlantica"
-	}
+	  "title" : "<a href='http://sporfbase.com/mediawiki/index.php/Atlantica'> Atlantica </a>"
+	},
+	{
+		"points" : [ [-2403,-1566],
+				 [-1994,-1177],
+				 [-1651,-1159],
+				 [-1651,-1275],
+				 [-1504,-1421],
+				 [-2006,-2020],
+				 [-2400,-2020],
+				 [-2580,-1787] ],
+		// Serves as an outline
+		"color" : "#003153",
+		"fillColor" : "#0080ff",
+		"fillOpacity" : "0.3",
+		"title" : "<a href='http://sporfbase.com/mediawiki/index.php/Kingdom_of_Westphalia'> Kingdom of Westphalia </a>"
+	  },
       ]
     }
   }
