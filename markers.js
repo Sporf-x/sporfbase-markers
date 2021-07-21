@@ -98,10 +98,22 @@ var MAPCRAFTER_MARKERS = [
 		{"pos" : [-200, 0, 64], "title" : "Granjero"},
 		{"pos" : [0, -300, 64], "title" : "Arcadia"},
 		{"pos" : [-3013, -1871, 64], "title" : "Sapia, Capital of Atlantica"},
-		{"pos" : [-3940, -1900, 64], "title" : "Prahrad"},
-		{"pos" : [-3617, -1900, 64], "title" : "New Szczecin"},
-		{"pos" : [-4227, -1849, 64], "title" : "Bernova"},
-    ],
+		],
+    },
+	{
+    "id" : "volnoria_cities",
+    "name" : "Volnoria",
+    "icon" : "shield_volnoria.svg",
+    "iconSize" : [32, 32],
+    "showDefault" : true,
+    "markers" : {
+      "fantasia" : [
+		// Points of Interest:
+		{"pos" : [-3939, -1905, 82], "title" : "Prahrad"},
+		{"pos" : [-3616, -1900, 59], "title" : "New Szczecin"}, // nice
+		{"pos" : [-4207, -1855, 96], "title" : "Bernova"},
+		{"pos" : [-4020, -1880, 103], "title" : "d9's Tower"},
+		],
     },
   },
   {
