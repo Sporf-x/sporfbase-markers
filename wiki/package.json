@@ -1,0 +1,13 @@
+{
+  "name": "parse_wiki_markers.js",
+  "version": "1.0.0",
+  "description": "Parse wiki pages for Leaflet location/region markers",
+  "main": "parse_wiki_markers.js",
+  "scripts": {
+    "runme": "node parse_wiki_markers.js"
+  },
+  "keywords": [],
+  "author": "Sporf-x",
+  "license": "ISC",
+  "dependencies": {}
+}
