@@ -24,7 +24,17 @@ async function main() {
     // TODO: Image
   }));
 
-  console.log(JSON.stringify({claims, poi}));
+  const jsonMarkers = JSON.stringify({claims, poi}, null, 2);
+  console.log(jsonMarkers);
+
+  // Catenate files
+  const filePath = "./markers.js";
+  const markersCode = fs.readFileSync(filePath, "utf8");
+
+  const resultString = `var generatedMarkerData = ${jsonMarkers};
+
+${markersCode}`;
+  fs.writeFileSync("./markers_catenated.js", resultString);
 }
 
 
