@@ -9,3 +9,7 @@ It is usually as simple as adding:
 in the text, where -200, 0 are the X and Z minecraft map coords. Polygons are also supported.
 
 If you have a pull request ready, be sure to notify Sporf on the discord server.
+
+# Credits
+
+Some icons from the [Google Material Design icon set](https://fonts.google.com/icons).

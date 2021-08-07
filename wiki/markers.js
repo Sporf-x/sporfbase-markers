@@ -75,12 +75,12 @@ var MAPCRAFTER_MARKERS = [
 	*/
 	{
 		// id of the marker group, without spaces/other special chars
-		"id": "signs",
+		"id": "settlements",
 		// name of the marker group, displayed in the webinterface
-		"name": "Signs",
+		"name": "Settlements",
 		// icon of the markers belonging to that group (optional)
 		//"icon" : "sign.png",
-		"icon": "emblem-photos.svg",
+		"icon": "settlement.svg",
 		// size of that icon
 		"iconSize": [32, 32],
 		// whether this marker group is shown by default (optional)
