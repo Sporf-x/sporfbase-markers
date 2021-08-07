@@ -98,22 +98,10 @@ var MAPCRAFTER_MARKERS = [
 		{"pos" : [-200, 0, 64], "title" : "Granjero"},
 		{"pos" : [0, -300, 64], "title" : "Arcadia"},
 		{"pos" : [-3013, -1871, 64], "title" : "Sapia, Capital of Atlantica"},
-		],
-    },
-	{
-    "id" : "volnoria_cities",
-    "name" : "Volnoria",
-    "icon" : "shield_volnoria.svg",
-    "iconSize" : [32, 32],
-    "showDefault" : true,
-    "markers" : {
-      "fantasia" : [
-		// Points of Interest:
-		{"pos" : [-3939, -1905, 82], "title" : "Prahrad"},
-		{"pos" : [-3616, -1900, 59], "title" : "New Szczecin"}, // nice
-		{"pos" : [-4207, -1855, 96], "title" : "Bernova"},
-		{"pos" : [-4020, -1880, 103], "title" : "d9's Tower"},
-		],
+		{"pos" : [-3940, -1900, 64], "title" : "Prahrad"},
+		{"pos" : [-3617, -1900, 64], "title" : "New Szczecin"},
+		{"pos" : [-4227, -1849, 64], "title" : "Bernova"},
+    ],
     },
   },
   {
@@ -127,98 +115,43 @@ var MAPCRAFTER_MARKERS = [
       latlngs.push(ui.mcToLatLng(x0, y0, 64));
       return L.polygon(
 	latlngs,
-				{
-					"color": markerInfo.color,
-					"fillColor": markerInfo.fillColor,
-					"fillOpacity": markerInfo.fillOpacity,
-				}).bindPopup(markerInfo.title);
-		},
-		"markers": {
-			"fantasia": [
-				// Territorial Claims
-				{
-					"points": [
-						[-2400, -2020],
-						[-2800, -1550],
-						[-3320, -1700],
-						[-3400, -2500]
-						[-3800, -2880]
-						[-3500, -3400],
-						[-2830, -4060],
-						[-2130, -3280],
-						[-2520, -2300]
-					],
-					// Serves as an outline
-					"color": "navy",
-					"fillColor": "#4169e1",
-					"fillOpacity": "0.3",
-					"title": "<a href='http://sporfbase.com/mediawiki/index.php/Atlantica'> Atlantica </a>"
-				},
-				{
-					"points": [
-						[-2403, -1566],
-						[-1994, -1177],
-						[-1651, -1159],
-						[-1651, -1275],
-						[-1504, -1421],
-						[-2006, -2020],
-						[-2400, -2020],
-						[-2580, -1787]
-					],
-					// Serves as an outline
-					"color": "#003153",
-					"fillColor": "#0080ff",
-					"fillOpacity": "0.3",
-					"title": "<a href='http://sporfbase.com/mediawiki/index.php/Kingdom_of_Westphalia'> Kingdom of Westphalia </a>"
-				},
-          	{
-		"points" : [ [-3769, -2196],
-					[-3721, -2142],
-					[-3638, -2087],
-					[-3579, -2029],
-					[-3487, -1945],
-					[-3488, -1909],
-					[-3566, -1819],
-					[-3633, -1814],
-					[-3643, -1809],
-					[-3679, -1825],
-					[-3693, -1810],
-					[-3657, -1759],
-					[-3667, -1739],
-					[-3772, -1679],
-					[-3810, -1665],
-					[-3874, -1659],
-					[-3950, -1733],
-					[-3981, -1735],
-					[-3989, -1730],
-					[-3975, -1714],
-					[-3982, -1653],
-					[-4011, -1623],
-					[-4064, -1599],
-					[-4091, -1611],
-					[-4103, -1637],
-					[-4259, -1625],
-					[-4291, -1589],
-					[-4311, -1618],
-					[-4326, -1622],
-					[-4348, -1643],
-					[-4335, -1679],
-					[-4341, -1708],
-					[-4375, -1725],
-					[-4366, -1827],
-					[-4363, -1873],
-					[-4378, -1891],
-					[-4363, -1921],
-					[-4313, -2135],
-					[-4003, -2217],
+	{
+	  "color": markerInfo.color,
+	  "fillColor": markerInfo.fillColor,
+	  "fillOpacity": markerInfo.fillOpacity,
+	}).bindPopup(markerInfo.title);
+    },
+    "markers": {
+      "fantasia": [
+	// Territorial Claims
+	{
+	  "points" : [ [-2400,-2020],
+		       [-2800,-1550],
+		       [-3320,-1700],
+		       [-3500,-3400],
+		       [-3500,-3400],
+		       [-3500,-3400],
+		       [-2520,-2300] ],
+	  // Serves as an outline
+	  "color" : "navy",
+	  "fillColor" : "#4169e1",
+	  "fillOpacity" : "0.3",
+	  "title" : "Atlantica"
+	},
+	{
+		"points" : [ [-3497,-1949],
+		       [-3815,-2207],
+		       [-4343,-2085],
+		       [-4338,-1720],
+		       [-3641,-1686],
 			   ],
 	  // Serves as an outline
 	  "color" : "#000000",
 	  "fillColor" : "#ff8058",
 	  "fillOpacity" : "0.3",
-	  "title" : "<a href='http://sporfbase.com/mediawiki/index.php/Volnoria'>Republic of Volnoria</a>"
-				},
-			]
-		}
+	  "title" : "Volnoria"
 	}
+      ]
+    }
+  }
 ];
