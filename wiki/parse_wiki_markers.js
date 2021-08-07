@@ -11,6 +11,8 @@ async function main() {
   const tables = getWikiTables(text);
   //console.log(JSON.stringify(tables));
 
+
+  // TODO: convert all titles to detect wiki link formatting and convert it into the HTML-based formatting MapCrafter can use
   const claims = tables["CLAIMDATA"].rows.map(([points, color, fillColor, title]) => ({
     points: JSON.parse(`[${points}]`),
     color,
