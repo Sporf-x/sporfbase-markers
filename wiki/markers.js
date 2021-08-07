@@ -110,7 +110,8 @@ var MAPCRAFTER_MARKERS = [
 		},
 		"markers": {
 			"fantasia": generatedMarkerData.claims,
-		}
+		},
+		"showDefault": false
 	},
 	{
 		// id of the marker group, without spaces/other special chars
