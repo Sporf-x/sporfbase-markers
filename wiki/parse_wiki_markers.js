@@ -11,6 +11,8 @@ async function main() {
   const tables = getWikiTables(text);
   //console.log(JSON.stringify(tables));
 
+
+  // TODO: convert all titles to detect wiki link formatting and convert it into the HTML-based formatting MapCrafter can use
   const claims = tables["CLAIMDATA"].rows.map(([points, color, fillColor, title]) => ({
     points: JSON.parse(`[${points}]`),
     color,
@@ -19,6 +21,19 @@ async function main() {
     title
   }));
   const poi = tables["POIDATA"].rows.map(([x, y, z, title]) => ({
+    pos: [Number(x), Number(y), Number(z)],
+    title: title,
+    // TODO: Image
+	/*
+		Looked into this: couldn't find a way to use remote icons in the Mapcrafter docs*, so
+		was thinking we'd just download the images to the working folder if not already present;
+		however, the API** apears to be down on my end so I couldn't test this out.
+				
+		*	https://docs.mapcrafter.org/builds/1.2/markers.html
+		** 	https://www.mediawiki.org/wiki/Special:ApiSandbox#action=query&format=json&maxlag=&origin=&prop=imageinfo&titles=File%3AAlbert%20Einstein%20Head.jpg&iiprop=url
+	*/
+  }));
+  const features = tables["GEODATA"].rows.map(([x, y, z, title]) => ({
     pos: [Number(x), Number(y), Number(z)],
     title: title,
     // TODO: Image
