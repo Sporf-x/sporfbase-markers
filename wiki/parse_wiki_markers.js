@@ -23,6 +23,11 @@ async function main() {
     title: title,
     // TODO: Image
   }));
+  const features = tables["GEODATA"].rows.map(([x, y, z, title]) => ({
+    pos: [Number(x), Number(y), Number(z)],
+    title: title,
+    // TODO: Image
+  }));
 
   const jsonMarkers = JSON.stringify({claims, poi}, null, 2);
   console.log(jsonMarkers);
