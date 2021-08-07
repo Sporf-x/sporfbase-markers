@@ -39,7 +39,7 @@ async function main() {
     // TODO: Image
   }));
 
-  const jsonMarkers = JSON.stringify({claims, poi}, null, 2);
+  const jsonMarkers = JSON.stringify({claims, poi, features}, null, 2);
   console.log(jsonMarkers);
 
   // Catenate files
