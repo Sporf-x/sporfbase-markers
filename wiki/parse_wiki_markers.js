@@ -11,15 +11,26 @@ async function main() {
   const tables = getWikiTables(text);
   //console.log(JSON.stringify(tables));
 
-
+  // Save JSON out (for debugging)
+  
   // TODO: convert all titles to detect wiki link formatting and convert it into the HTML-based formatting MapCrafter can use
-  const claims = tables["CLAIMDATA"].rows.map(([points, color, fillColor, title]) => ({
-    points: JSON.parse(`[${points}]`),
-    color,
-    fillColor,
-    fillOpacity: 0.3,
-    title
-  }));
+  const claims = tables["CLAIMDATA"].rows.map(([points, color, fillColor, title]) => {
+    try {
+      const values = {
+	points: JSON.parse(`[${points}]`),
+	color,
+	fillColor,
+	fillOpacity: 0.3,
+	title
+      };
+      return values;
+    } catch( ex ) {
+      console.log(`Exception processing claim data: ${ex}`);
+      console.log("~~CLAIM DATA~~");
+      console.log([points,color,fillColor,title]);
+    }
+  });
+  
   const poi = tables["POIDATA"].rows.map(([x, y, z, title]) => ({
     pos: [Number(x), Number(y), Number(z)],
     title: title,
@@ -40,7 +51,7 @@ async function main() {
   }));
 
   const jsonMarkers = JSON.stringify({claims, poi, features}, null, 2);
-  console.log(jsonMarkers);
+  //console.log(jsonMarkers);
 
   // Catenate files
   const filePath = "./markers.js";
