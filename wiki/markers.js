@@ -88,7 +88,7 @@ var MAPCRAFTER_MARKERS = [
 		// markers of this marker group...
 		"markers": {
 			// ...in the world "world"
-			"fantasia": generatedMarkerData.poi,
+			"bosporus": generatedMarkerData.poi,
 		},
 	},
 	{
@@ -109,7 +109,7 @@ var MAPCRAFTER_MARKERS = [
 				}).bindPopup(markerInfo.title);
 		},
 		"markers": {
-			"fantasia": generatedMarkerData.claims,
+			"bosporus": generatedMarkerData.claims,
 		},
 		"showDefault": false
 	},
@@ -128,7 +128,7 @@ var MAPCRAFTER_MARKERS = [
 		// markers of this marker group...
 		"markers": {
 			// ...in the world "world"
-			"fantasia": generatedMarkerData.features,
+			"bosporus": generatedMarkerData.features,
 		},
 	}
 ];
